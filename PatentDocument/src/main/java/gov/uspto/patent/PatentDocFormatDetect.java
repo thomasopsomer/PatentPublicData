@@ -16,7 +16,7 @@ public class PatentDocFormatDetect {
 	/**
 	 * Determine XML body tag from bulk zip file name
 	 * 
-	 * @param filename
+	 * @param file
 	 * @return
 	 */
 	public PatentDocFormat fromFileName(File file) {

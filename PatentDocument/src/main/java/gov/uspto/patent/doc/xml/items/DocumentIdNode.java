@@ -10,10 +10,11 @@ import gov.uspto.patent.model.CountryCode;
 import gov.uspto.patent.model.DocumentDate;
 import gov.uspto.patent.model.DocumentId;
 
+
 public class DocumentIdNode extends ItemReader<DocumentId> {
 	private static final Logger LOGGER = LoggerFactory.getLogger(DocumentIdNode.class);
 
-	private static final String ITEM_NODE_NAME = "document-id";
+	// private static final String ITEM_NODE_NAME = "priority-claim";
 
 	private static final CountryCode DEFAULT_COUNTRYCODE = CountryCode.US;
 
@@ -24,7 +25,7 @@ public class DocumentIdNode extends ItemReader<DocumentId> {
 	}
 
 	public DocumentIdNode(Node itemNode, CountryCode fallbackCountryCode) {
-		super(itemNode, ITEM_NODE_NAME);
+		super(itemNode, itemNode.getName());
 		this.fallbackCountryCode = fallbackCountryCode;
 	}
 
